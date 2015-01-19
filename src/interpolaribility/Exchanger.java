@@ -5,8 +5,7 @@ import model.Money;
 
 public class Exchanger {
     
-    public Money Exchange (Money money, ExchangeRate exchangerate){
-        return money;
+    public Money exchange(Money money, ExchangeRate rate){
+        return money; 
     }
-    
 }

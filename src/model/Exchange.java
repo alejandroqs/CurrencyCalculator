@@ -1,11 +1,14 @@
 package model;
 
 public class Exchange {
-    private final Money money;
-    private final Currency currency;
 
-    public Exchange(Money money, Currency currency) {
-        this.money = money;
-        this.currency = currency;
+    private Money money;
+
+    public void exchange(Money money, ExchangeRate exchangeRate) {
+        this.money = new Money(money.getAmount().mult(exchangeRate.getRate()), exchangeRate.getToCurrency());
+    }
+
+    public Money getMoney() {
+        return money;
     }
 }
